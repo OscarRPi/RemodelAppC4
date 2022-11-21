@@ -8,8 +8,8 @@ import {Link} from 'react-router-dom';
 function Navegacion() {
     return (
         <>
-        <div className='divisor nav-bar'>
-                <Navbar collapseOnSelect className='nav-bar' expand='xxl' bg="light" variant="light">
+        <div className='divisor nav-barr'>
+                <Navbar collapseOnSelect className='nav-bar centrar' expand='xxl' bg="light" variant="light">
                     <Container>
                         <Navbar.Brand>
                             <Link to='/'>
@@ -30,7 +30,7 @@ function Navegacion() {
                                 </NavDropdown>
                             </Nav>
                             <Nav>
-                                <Nav.Link>LOGIN<span></span></Nav.Link>
+                                <Nav.Link href="/login">LOGIN<span></span></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
