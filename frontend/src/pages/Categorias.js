@@ -56,7 +56,7 @@ function Categorias() {
             <div class="container-fluid centrar containerproductos">
                 {categoriaActiva.map((producto) => (
                     <ProductCard producto={producto} />
-                ))};
+                ))}
             </div>  
         </>
     )
