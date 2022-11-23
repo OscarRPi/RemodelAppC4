@@ -1,11 +1,12 @@
-require('dotenv').config()
+require('dotenv').config();
 
-const app = require('./app')
-require('./database')
+const app = require('./app');
+require('./database');
 
-async function main(){
-    await app.listen(app.get('port'))
-    console.log('El servidor esta corriendo en el puerto ' + app.get('port'))
+//Promesa para correr el servidor
+async function main() {
+    await app.listen(app.get('port'));
+    console.log('Servidor corriendo en el puerto!!' + app.get('port'));
 }
 
-main()
+main();
