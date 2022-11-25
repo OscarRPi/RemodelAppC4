@@ -17,7 +17,7 @@ function ProductCard(props){
         try {
             const res = await ProveedorsServer.listProveedors();
             const data = await res.json();
-            setProveedors(data.proveedors);
+            setProveedors(data);
         } catch (error) {
             console.log(error);
         }
@@ -31,8 +31,8 @@ function ProductCard(props){
         <div className="productos mt-4 mb-4 homeF">
             <img src={producto.producto.URL} alt="Imagen del producto" />
             <h6 className="proveedor mt-1">
-                {proveedors.filter(proveedor => proveedor.Id_Proveedor == producto.producto.Id_Proveedor_id).map(filtrado => (
-                    filtrado.Proveedor
+                {proveedors.filter(proveedor => proveedor._id === producto.producto.Proveedor).map(filtrado => (
+                    filtrado.proveedor
                 )
                 )}
             </h6>

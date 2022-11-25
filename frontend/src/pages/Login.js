@@ -1,6 +1,16 @@
 import '../pages/Login.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(){
+
+    const navigate = useNavigate();
+
+    const handleSubmit= (e) => {
+        e.preventDefault();
+        console.log('hola');
+        navigate('/dashboard');
+    }
+
     return (
         <div class="body-login">
             <form className='container-login centrar'>
@@ -13,8 +23,8 @@ export default function Login(){
                     <label for="password">CONTRASEÑA</label>
                     <input type="password" name="password" id="password" />
                 </div>
-                <div class="boton centrar">
-                <button type="button" id="logear" class="mt-2">INGRESAR</button>
+                <div class="boton centrar mb-4">
+                <button onClick={handleSubmit} type="button" id="logear" class="mt-2">INGRESAR</button>
                 </div>
             </form>
             <h2 class="mt-5 mb-5">REMODEL<span class="bold">APP</span></h2>

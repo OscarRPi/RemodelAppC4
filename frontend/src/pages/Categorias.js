@@ -8,19 +8,19 @@ function Categorias() {
     let nCategoria = '';
 
     switch (id) {
-        case '1':
+        case 'Baño':
             nCategoria = 'BAÑOS';
             break;
-        case '2':
+        case 'Carpintería':
             nCategoria = 'CARPINTERIA';
             break;
-        case '3':
+        case 'Cocina':
             nCategoria = 'COCINAS';
             break;
-        case '4':
+        case 'Pintura':
             nCategoria = 'PINTURAS';
             break;
-        case '5':
+        case 'Piso':
             nCategoria = 'PISOS';
             break;
         default:
@@ -34,7 +34,7 @@ function Categorias() {
         try {
             const res = await ProductsServer.listProducts();
             const data = await res.json();
-            setProducts(data.products);
+            setProducts(data);
         } catch(error){
             console.log(error);
         }
@@ -44,7 +44,7 @@ function Categorias() {
         listProducts();
     }, [])
 
-    let categoriaActiva = products.filter(producto => producto.Id_Categoria_id == id);
+    let categoriaActiva = products.filter(producto => producto.Categoria === id);
 
     return (
         <>
