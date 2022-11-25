@@ -137,3 +137,19 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.aNavBar {
+    font-weight: 500;
+    color: #0000008c;
+    text-decoration: none;
+}
+
+.aNavBar:hover {
+    color: #000000b3;
+}
+
+.aNavDrop {
+    color: #0000008c;
+    text-decoration: none;
+}
+

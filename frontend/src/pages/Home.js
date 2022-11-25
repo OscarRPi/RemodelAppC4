@@ -20,27 +20,27 @@ function Home() {
                 <div className="card tarjetasproductos mt-5 p-4">
                     <h3>BAÑOS</h3>
                     <img className="mt-3 mb-3" src={categoria5} alt="" />
-                        <Link to="/categoria/1"><button className="mt-3">VER PRODUCTOS</button></Link>
+                        <Link to="/categoria/Baño"><button className="mt-3">VER PRODUCTOS</button></Link>
                 </div>
                 <div className="card tarjetasproductos mt-5 p-4">
                     <h3>CARPINTERIA</h3>
                     <img className="mt-3 mb-3" src={categoria3} alt="Imagen Categoria" />
-                        <Link to="/categoria/2"><button className="mt-3">VER PRODUCTOS</button></Link>
+                        <Link to="/categoria/Carpintería"><button className="mt-3">VER PRODUCTOS</button></Link>
                 </div>
                 <div className="card tarjetasproductos mt-5 p-4">
                     <h3>COCINAS</h3>
                     <img className="mt-3 mb-3" src={categoria4} alt="" />
-                        <Link to="/categoria/3"><button className="mt-3">VER PRODUCTOS</button></Link>
+                        <Link to="/categoria/Cocina"><button className="mt-3">VER PRODUCTOS</button></Link>
                 </div>
                 <div className="card tarjetasproductos mt-5 p-4">
                     <h3>PINTURAS</h3>
                     <img className="mt-3 mb-3" src={categoria2} alt="" />
-                        <Link to="/categoria/4"><button className="mt-3">VER PRODUCTOS</button></Link>
+                        <Link to="/categoria/Pintura"><button className="mt-3">VER PRODUCTOS</button></Link>
                 </div>
                 <div className="card tarjetasproductos mt-5 p-4">
                     <h3>PISOS</h3>
                     <img className="mt-3 mb-3" src={categoria1} alt="" />
-                        <Link to="/categoria/5"><button className="mt-3">VER PRODUCTOS</button></Link>
+                        <Link to="/categoria/Piso"><button className="mt-3">VER PRODUCTOS</button></Link>
                 </div>
             </div>
         </div>

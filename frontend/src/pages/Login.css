@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200&display=swap');
 
 .body-login {
-    height: 79vh;
-    background-color: #C7A987;
+    height: 83vh;
+    background: #C7A987;
     padding-top: 40px;
     font-family: 'Poppins', sans-serif;
 }

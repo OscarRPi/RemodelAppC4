@@ -4,12 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../images/Logo.png'
 import {Link} from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa'
 
 function Navegacion() {
     return (
         <>
-        <div className='divisor nav-barr'>
-                <Navbar collapseOnSelect className='nav-bar centrar' expand='xxl' bg="light" variant="light">
+        <div className='divisor nav-bar'>
+                <Navbar collapseOnSelect className='nav-bar' expand='xxl' bg="light" variant="light">
                     <Container>
                         <Navbar.Brand>
                             <Link to='/'>
@@ -19,18 +20,18 @@ function Navegacion() {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link>INICIO</Nav.Link>
-                                <Nav.Link>CATEGORIAS</Nav.Link>
-                                <NavDropdown title="PRODUCTOS" id="collasible-nav-dropdown">
-                                    <NavDropdown.Item>BAÑO</NavDropdown.Item>
-                                    <NavDropdown.Item>CARPINTERIA</NavDropdown.Item>
-                                    <NavDropdown.Item>COCINA</NavDropdown.Item>
-                                    <NavDropdown.Item>PINTURA</NavDropdown.Item>
-                                    <NavDropdown.Item>PISOS</NavDropdown.Item>
+                                <Nav.Link><Link className='aNavBar' to='/'>INICIO</Link></Nav.Link>
+                                <Nav.Link className='aNavBar'>CATEGORIAS</Nav.Link>
+                                <NavDropdown className='aNavBar' title="PRODUCTOS" id="collasible-nav-dropdown">
+                                    <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Baño'>BAÑO</Link></NavDropdown.Item>
+                                    <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Carpintería'>CARPINTERIA</Link></NavDropdown.Item>
+                                    <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Cocina'>COCINA</Link></NavDropdown.Item>
+                                    <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Pintura'>PINTURA</Link></NavDropdown.Item>
+                                    <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Piso'>PISOS</Link></NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/login">LOGIN<span></span></Nav.Link>
+                                <Nav.Link><Link className='aNavBar' to='/login'>LOGIN<span><FaUserAlt /></span></Link></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
