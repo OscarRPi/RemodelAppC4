@@ -39,7 +39,7 @@ userRouter.post(
           return;
         }
       }
-      res.status(404).send({ message: "Email o Usuario invalidos" });
+      res.status(404).send({ message: "Usuario o contraseña invalidos" });
     })
   );
 
