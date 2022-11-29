@@ -21,7 +21,7 @@ function Navegacion() {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
                                 <Nav.Link><Link className='aNavBar' to='/'>INICIO</Link></Nav.Link>
-                                <Nav.Link className='aNavBar'>CATEGORIAS</Nav.Link>
+                                <Nav.Link><Link className='aNavBar'>CATEGORIAS</Link></Nav.Link>
                                 <NavDropdown className='aNavBar' title="PRODUCTOS" id="collasible-nav-dropdown">
                                     <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Baño'>BAÑO</Link></NavDropdown.Item>
                                     <NavDropdown.Item><Link className='aNavDrop' to='/categoria/Carpintería'>CARPINTERIA</Link></NavDropdown.Item>

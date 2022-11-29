@@ -19,7 +19,7 @@ function DashProducts(){
                             <div className="centrar">
                                 <h2 className="mt-4 mb-2">LISTAR PRODUCTOS POR CATEGORIA</h2>
                                 <TableCategories />
-                                <Link><button className="pl-4 pr-4">CREAR PRODUCTO</button></Link>
+                                <Link to='/dashboard/createproduct'><button className="pl-4 pr-4">CREAR PRODUCTO</button></Link>
                             </div>
                         </div>
                     </Col>

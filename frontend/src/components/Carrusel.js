@@ -2,6 +2,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import carousel1 from '../images/Carrusel1.png';
 import carousel2 from '../images/Carrusel2.png';
 import carousel3 from '../images/Carrusel3.png';
+import carousel4 from '../images/Carrusel4.png';
+import carousel5 from '../images/Carrusel5.png';
 
 function Carrusel() {
     return (
@@ -33,14 +35,14 @@ function Carrusel() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 carruselh"
-                                src={carousel3}
+                                src={carousel4}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 carruselh"
-                                src={carousel3}
+                                src={carousel5}
                                 alt="Third slide"
                             />
                         </Carousel.Item>

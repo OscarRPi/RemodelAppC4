@@ -25,7 +25,7 @@
 }
 
 .izq {
-    height: 83vh;
+    height: 100vh;
     background: #C7A987;
 }
 
@@ -81,6 +81,15 @@
     color: #C7A987;
 }
 
+.edit:hover {
+    cursor: pointer;
+}
+
 .delete {
     color: #eb4034;
 }
+
+.delete:hover {
+    cursor: pointer;
+}
+

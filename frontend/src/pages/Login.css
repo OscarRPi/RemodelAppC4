@@ -80,3 +80,8 @@
 .bold {
     font-weight: 700;
 }
+
+.alertF {
+    display: flex;
+    width: 500px;
+}

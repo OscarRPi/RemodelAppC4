@@ -7,13 +7,15 @@ import Table from "react-bootstrap/esm/Table"
 import { FaEdit } from 'react-icons/fa'
 import { AiFillDelete } from 'react-icons/ai'
 import './dashboard.css'
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 import React, {useEffect, useState} from 'react';
 import * as ProductsServer from '../pages/ProductsServer'
 import * as ProveedorsServer from '../pages/ProveedorsServer';
 
 export default function DashListProducts() {
     const {id} = useParams();
+
+    const navigate = useNavigate();
 
     let nomCategoria = ''
 
@@ -69,6 +71,10 @@ export default function DashListProducts() {
         listProveedors();
     }, [])
 
+    const handleDelete = async (productId) => {
+        await ProductsServer.deleteProduct(productId);
+        listProducts();
+    }
 
     let categoriaActiva = products.filter(producto => producto.Categoria === id);
 
@@ -105,13 +111,13 @@ export default function DashListProducts() {
                                                 <td>{producto.Valor}</td>
                                                 <td>{producto.Color}</td>
                                                 <td>{producto.Tipo_Material}</td>
-                                                <td><span className="edit"><FaEdit /></span></td>
-                                                <td><span className="delete"><AiFillDelete /></span></td>
+                                                <td><span className="edit" onClick={()=>navigate(`/dashboard/updateproduct/${producto._id}`)}><FaEdit /></span></td>
+                                                <td><span className="delete" onClick={()=> producto._id && handleDelete(producto._id)}><AiFillDelete /></span></td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </Table>
-                                <Link><button className="pl-4 pr-4">CREAR PRODUCTO</button></Link>
+                                <Link to='/dashboard/createproduct'><button className="pl-4 pr-4">CREAR PRODUCTO</button></Link>
                             </div>
                         </div>
                     </Col>
